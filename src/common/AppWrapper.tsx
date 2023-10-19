@@ -30,7 +30,7 @@ const getRandomBrowser = () => {
 }
 
 growthbook.setAttributes({
-	id: "foo",
+	id: `userid-${Math.random()}`,
 	deviceId: "foo",
 	company: "foo",
 	loggedIn: true,
