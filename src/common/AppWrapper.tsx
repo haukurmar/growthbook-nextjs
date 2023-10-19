@@ -17,6 +17,18 @@ const growthbook = new GrowthBook({
 	},
 })
 
+const getRandomBrowser = () => {
+	let browser = "safari"
+	// Return either chrome, firefox, or safari based on random number
+	const random = Math.random()
+	if (random < 0.33) browser = "chrome"
+	if (random < 0.66) browser = "firefox"
+
+	console.log("browser: ", browser)
+
+	return browser
+}
+
 growthbook.setAttributes({
 	id: "foo",
 	deviceId: "foo",
@@ -24,7 +36,7 @@ growthbook.setAttributes({
 	loggedIn: true,
 	employee: true,
 	country: "foo",
-	browser: "foo",
+	browser: getRandomBrowser(),
 	url: "foo",
 })
 
