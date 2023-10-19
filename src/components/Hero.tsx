@@ -10,9 +10,15 @@ import logoStaticKit from "@/images/logos/statickit.svg"
 import logoTransistor from "@/images/logos/transistor.svg"
 import logoTuple from "@/images/logos/tuple.svg"
 import { useFeatureIsOn } from "@growthbook/growthbook-react"
+import { useEffect } from "react"
 
 export function Hero() {
 	const videoButtonVisible = useFeatureIsOn("watch-video-button-visible")
+
+	useEffect(() => {
+		console.log("videoButtonVisible: ", videoButtonVisible)
+	}, [videoButtonVisible])
+
 	return (
 		<Container className="pb-16 pt-20 text-center lg:pt-32">
 			<h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
